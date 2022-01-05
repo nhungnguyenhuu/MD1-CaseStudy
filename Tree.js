@@ -1,8 +1,9 @@
 class Tree {
-    constructor(x, y, avt) {
+    constructor(x, y,avt) {
         this.x= x;
         this.y = y;
         this.avt = avt;
+        this.size = 200;
     }
     draw(ctx){
         let a = this.x;
@@ -10,7 +11,7 @@ class Tree {
         let img = new Image();
         ctx.beginPath();
         img.onload = function (){
-            ctx.drawImage(img, a, b, 200, 200);
+            ctx.drawImage(img, a, b, this.size, this.size);
 
         }
         img.src = this.avt;

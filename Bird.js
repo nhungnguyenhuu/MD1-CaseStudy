@@ -1,5 +1,5 @@
 class Bird {
-    constructor(x, y, avt) {
+    constructor(x, y,avt) {
         this.x= x;
         this.y = y;
         this.avt = avt

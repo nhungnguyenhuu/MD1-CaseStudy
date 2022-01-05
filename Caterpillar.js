@@ -1,5 +1,5 @@
 class Caterpillar {
-    constructor(x, y, avt) {
+    constructor(x, y,avt) {
         this.x = x;
         this.y = y;
         this.avt = avt;
@@ -12,17 +12,14 @@ class Caterpillar {
         let img = new Image();
         ctx.beginPath();
         img.onload = function () {
-            ctx.drawImage(img, a, b, 20, 20);
+            ctx.drawImage(img,a, b , 20, 20);
         }
         img.src = this.avt;
         ctx.fill();
         ctx.closePath();
     }
-    move(){
+    dropDown(){
         this.y +=  this.speed;
     }
-    drop(ctx){
-        this.draw(ctx);
-        this.move();
-    }
+
 }

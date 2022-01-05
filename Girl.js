@@ -1,8 +1,9 @@
 class Girl {
-    constructor(x, y, avt) {
+    constructor(x, y,avt) {
         this.x = x;
         this.y = y;
         this.avt = avt;
+        this.speed= 30;
         this.score = 0;
     }
     draw(ctx) {
@@ -11,7 +12,7 @@ class Girl {
         let img = new Image();
         ctx.beginPath();
         img.onload = function () {
-            ctx.clearRect(0, 0, 1255, 700)
+            ctx.clearRect(0, 0, 1255, 650)
             ctx.drawImage(img, a, b, 100, 100)
         }
         img.src = this.avt;
@@ -19,15 +20,15 @@ class Girl {
         ctx.closePath();
     }
     moveLeft(){
-        this.x-= 30;
+        this.x-= this.speed;
     }
     moveRight(){
-        this.x+= 30;
+        this.x+= this.speed;
     }
     moveUp(){
-        this.y -=50;
+        this.y -=this.speed;
     }
     moveDown(){
-        this.y += 50;
+        this.y += this.speed;
     }
 }
