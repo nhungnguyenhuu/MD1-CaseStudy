@@ -17,4 +17,5 @@ class Bird {
         ctx.fill();
         ctx.closePath();
     }
+
 }

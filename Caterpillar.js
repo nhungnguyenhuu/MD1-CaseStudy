@@ -1,33 +1,28 @@
-class Girl {
+class Caterpillar {
     constructor(x, y, avt) {
         this.x = x;
         this.y = y;
         this.avt = avt;
-        this.score = 0;
+        this.speed = 5;
     }
+
     draw(ctx) {
         let a = this.x;
         let b = this.y;
         let img = new Image();
         ctx.beginPath();
         img.onload = function () {
-            ctx.clearRect(0, 0, 1255, 700)
-            ctx.drawImage(img, a, b, 100, 100)
+            ctx.drawImage(img, a, b, 20, 20);
         }
         img.src = this.avt;
         ctx.fill();
         ctx.closePath();
     }
-    moveLeft(){
-        this.x-= 30;
+    move(){
+        this.y +=  this.speed;
     }
-    moveRight(){
-        this.x+= 30;
-    }
-    moveUp(){
-        this.y -=50;
-    }
-    moveDown(){
-        this.y += 50;
+    drop(ctx){
+        this.draw(ctx);
+        this.move();
     }
 }
