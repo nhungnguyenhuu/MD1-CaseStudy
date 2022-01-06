@@ -3,12 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        center {
+            background: url("https://i.gifer.com/GYks.gif");
+            background-size: cover;
+        }
+    </style>
+    <script src="Girl.js"></script>
+    <script src="Tree.js"></script>
+<!--    <script src="Bird.js"></script>-->
+    <script src="Apple.js"></script>
+    <script src="Caterpillar.js"></script>
+    <script src="data.js"></script>
+
+
 </head>
-<body>
-<canvas id="myCanvas" width="1250" height="600" style="border:1px solid #d3d3d3;"></canvas>
-<button style="color: red" onclick="">Chiến</button>
-<button style="color: blue" onclick="">Xem luật chơi</button>
-<script src="hinhNen.js"></script>
-<script src="Girl.js"></script>
+<body onload="docReady()">
+<img src="image/case-coBeCat.png" alt="" style="display: none">
+<img src="image/case-cayTaoCat.png" alt="" style="display: none">
+<img src="image/case-chimCat.png" alt="" style="display: none">
+<img src="image/case-Sau.png" alt="" style="display: none">
+<img src="image/case-quaTaoCat.png" alt="" style="display: none">
+<style>
+    #game{
+        position: absolute;
+        left: 20px;
+        top: 20px
+    }
+</style>
+<div id="game">
+    <span style="font-weight: bold;color: #4144e1">HighScore: </span>
+    <span style="color: #1b63ea" id="high-score">0</span>
+    <br>
+    <span style="font-weight: bold">Score: </span>
+    <span id="score">0</span>
+</div>
+<center><canvas id="myCanvas"   width="1255" height="650" style="border:1px solid #d3d3d3;"></canvas>
+</center>
+<script src="main.js"></script>
+
 </body>
 </html>

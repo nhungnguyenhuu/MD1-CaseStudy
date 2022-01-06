@@ -2,7 +2,7 @@ class Bird {
     constructor(x, y,avt) {
         this.x= x;
         this.y = y;
-        this.avt = avt
+        this.avt = avt;
     }
     draw(ctx){
         let a = this.x;

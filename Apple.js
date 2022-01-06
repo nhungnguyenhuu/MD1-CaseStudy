@@ -1,10 +1,12 @@
 class Apple {
-    constructor(x, y,avt) {
+    constructor(x, y, avt) {
         this.x = x;
         this.y = y;
         this.avt = avt;
         this.speed = 5;
-        this.size = 20
+        this.status = true;
+        this.point =5;
+        this.size =20;
     }
 
     draw(ctx) {
@@ -13,15 +15,15 @@ class Apple {
         let img = new Image();
         ctx.beginPath();
         img.onload = function () {
-            ctx.drawImage(img, a, b, this.size, this.size);
+            ctx.drawImage(img, a, b, 20, 20);
         }
         img.src = this.avt;
         ctx.fill();
         ctx.closePath();
     }
 
-
-    dropDown(){
+    dropDown() {
         this.y += this.speed
     }
+
 }

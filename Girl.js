@@ -4,7 +4,6 @@ class Girl {
         this.y = y;
         this.avt = avt;
         this.speed= 30;
-        this.score = 0;
     }
     draw(ctx) {
         let a = this.x;
